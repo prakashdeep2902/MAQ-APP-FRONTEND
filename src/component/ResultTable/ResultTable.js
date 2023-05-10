@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ResultTable = ({attempt,earnPoints}) => {
+const ResultTable = ({attempts,earnPoints,flag}) => {
     return (
         <div>
             <table>
@@ -15,9 +15,9 @@ const ResultTable = ({attempt,earnPoints}) => {
                 <tbody>
                     <tr className='table-body'>
                         <td>Daily Tuition</td>
-                        <td>{attempt}</td>
+                        <td>{attempts}</td>
                         <td>{earnPoints}</td>
-                        <td> {earnPoints>=30?'passed':'faild'}</td>
+                        <td style={{ color: `${flag ? "#2aff95" : "#ff2a66"}` }}> {flag ? "Passed" : "Failed"}</td>
                     </tr>
                 </tbody>
             </table>
